@@ -26,6 +26,5 @@ for(int i=0;i<n;i++)
 }
 }
 printf("%d",max);
-//hi
 return 0;
 }

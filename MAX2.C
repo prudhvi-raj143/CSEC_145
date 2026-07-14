@@ -1,31 +1,36 @@
-#include<stdio.h>
-#include<limits.h>
+#include <stdio.h>
+#include <limits.h>
+
 int main()
 {
-int n;
-scanf("%d",&n);
-int a[n],max=INT_MIN,cur;
-for(int i=0;i<n;i++)
-{
-    scanf("%d",&a[i]);
-}
-for(int i=0;i<n;i++)
-{
-    for(int j=i;j<n;j++)
+    int n;
+    scanf("%d", &n);
+
+    int a[n];
+
+    for (int i = 0; i < n; i++)
     {
-        cur=0;
-        for(int k=i;k<=j;k++)
+        scanf("%d", &a[i]);
+    }
+
+    int max = INT_MIN;
+
+    for (int i = 0; i < n; i++)
+    {
+        int cur = 0;
+
+        for (int j = i; j < n; j++)
         {
-            cur+=a[k];
-        
-        if(cur>max)
-        {
-            max=cur;
+            cur += a[j];
+
+            if (cur > max)
+            {
+                max = cur;
+            }
         }
     }
-}
-}
-printf("%d",max);
-//higit s
-return 0;
+
+    printf("%d\n", max);
+
+    return 0;
 }
